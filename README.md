@@ -91,8 +91,8 @@ C와 Modern CMake를 기반으로 여러 C 학습 프로젝트, 실험 코드, �
 ```text
 include/
 └── project_name/
-    ├── foo.hpp
-    └── bar.hpp
+    ├── foo.h
+    └── bar.h
 ```
 
 Library를 외부 Target에서 사용할 수 있도록 Public API를 정의하는 위치입니다.
@@ -133,7 +133,7 @@ Library 또는 특정 기능에 대한 테스트를 별도의 Target으로 구�
 다음 환경을 권장합니다.
 
 * CMake 3.23 이상
-* C++23을 지원하는 Compiler
+* C17 이상을 지원하는 Compiler
 
   * GCC
   * Clang
@@ -301,7 +301,7 @@ target_link_libraries(
 add_library(
     my_library
     STATIC
-    my_library.cpp
+    my_library.c
 )
 ```
 
@@ -332,7 +332,7 @@ target_link_libraries(
 add_library(
     my_library
     STATIC
-    my_library.cpp
+    my_library.c
 )
 
 target_include_directories(
@@ -358,7 +358,7 @@ target_link_libraries(
 ```cmake
 add_executable(
     example_app
-    example_main.cpp
+    example_main.c
 )
 ```
 
@@ -379,15 +379,15 @@ target_link_libraries(
 ```text
 examples/
 ├── templates/
-│   ├── concepts_example.cpp
-│   └── forwarding_example.cpp
+│   ├── concepts_example.c
+│   └── forwarding_example.c
 │
 ├── memory/
-│   ├── lifetime_example.cpp
-│   └── allocator_example.cpp
+│   ├── lifetime_example.c
+│   └── allocator_example.c
 │
 └── system/
-    └── process_example.cpp
+    └── process_example.c
 ```
 
 와 같이 관심 분야별로 확장할 수 있습니다.
@@ -403,7 +403,7 @@ examples/
 ```cmake
 add_executable(
     my_library_test
-    my_library_test.cpp
+    my_library_test.c
 )
 ```
 
@@ -431,7 +431,7 @@ gtest_discover_tests(my_library_test)
 ```cmake
 add_executable(
     my_library_test
-    my_library_test.cpp
+    my_library_test.c
 )
 
 target_link_libraries(
@@ -479,16 +479,16 @@ gtest_discover_tests(my_library_test)
 ```text
 include/
 └── my_project/
-    └── vector.hpp
+    └── vector.h
 
 src/
-└── vector.cpp
+└── vector.c
 
 examples/
-└── vector_example.cpp
+└── vector_example.c
 
 tests/
-└── vector_test.cpp
+└── vector_test.c
 ```
 
 와 같이 구성할 수 있습니다.
@@ -543,7 +543,7 @@ valgrind \
 
 * [ ] 최상위 `project()` 이름 변경
 * [ ] 프로젝트 `VERSION` 수정
-* [ ] 필요한 C++ Standard 확인
+* [ ] 필요한 C Standard 확인
 * [ ] `README.md` 수정
 * [ ] 불필요한 Example 제거 또는 교체
 * [ ] 필요한 Library Target 추가
