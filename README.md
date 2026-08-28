@@ -557,24 +557,16 @@ valgrind \
 
 # Notes
 
-이 템플릿은 하나의 특정 프로그램을 위한 완성된 프로젝트 구조라기보다, 여러 C++ 코드와 프로젝트를 지속적으로 추가하고 관리하기 위한 기반 구조를 목표로 합니다.
+이 템플릿은 하나의 특정 프로그램을 위한 완성된 프로젝트 구조라기보다, 여러 C 코드와 프로젝트를 지속적으로 추가하고 관리하기 위한 기반 구조를 목표로 합니다.
 
 필요에 따라 다음과 같은 주제를 하나의 Repository 안에서 독립적인 Target으로 관리할 수 있습니다.
 
-* Modern C++
-* Templates
-* Concepts
-* Generic Programming
-* Memory Management
-* RAII
-* Smart Pointers
+* Memory Allocator
 * Data Structures
 * Algorithms
-* Concurrency
 * System Programming
 * Graphics Programming
-* Template Libraries
-* 기타 독립적인 C++ 프로젝트
+* 기타 독립적인 C 프로젝트
 
 프로젝트가 커지더라도 Library, Example, Test를 Target 단위로 분리하여 관리하는 것을 권장합니다.
 
