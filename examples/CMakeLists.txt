@@ -1,19 +1,20 @@
 # ============================================================
-# Examples
+# Examples(executable)
 # ============================================================
 
-# Add example executables here.
-#
-# Example:
-#
+# Add executable
+
 # add_executable(
-#   example_app
-#   example-main.cc
+#   Query_app
+#   query-main.c
 # )
 #
 # target_link_libraries(
-#   example_app
+#   Query_app
 #   PRIVATE
+#   Query_lib
 #   project_warnings
 #   project_sanitizers
 # )
+
+
